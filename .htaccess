@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect all requests to /public unless already in /public
+RewriteCond %{REQUEST_URI} !^/~x018489/alko/public/
+RewriteRule ^(.*)$ /~x018489/alko/public/$1 [L]
