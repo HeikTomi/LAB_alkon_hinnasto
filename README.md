@@ -1,5 +1,7 @@
 # ALKON HINNASTO ASSIGNMENT
 
+.htaccess in project root redirect all queries to /public/index.php if not there
+
 ## MVC FOLDER HIERARCHY
  - app
     - controllers
@@ -10,7 +12,7 @@
 - public
     - custom CSS
     - custom JavaScript
-    - index.page to use APP
+    - index.php -page to use APP
 - temp
     - Excel file of Hinnato (Data source from website)
     - place to store .csv when created
