@@ -7,7 +7,7 @@ class AlkonHinnastoView {
         $bottleSizeMin = $_GET['bottleSizeMin'] ?? '0';
         $bottleSizeMax = $_GET['bottleSizeMax'] ?? '1';
         $priceMin = $_GET['priceMin'] ?? '0';
-        $priceMax = $_GET['priceMax'] ?? '1000';
+        $priceMax = $_GET['priceMax'] ?? '6000';
         $energyMin = $_GET['energyMin'] ?? '0';
         $energyMax = $_GET['energyMax'] ?? '50';
 
@@ -73,8 +73,8 @@ class AlkonHinnastoView {
             <div class="mb-3">
                 <label for="price">Price Range:</label>
                 <div class="slider-container">
-                    <input type="range" id="priceMin" class="slider form-range" name="priceMin" min="0" max="1000" step="0.01" value="' . htmlspecialchars($priceMin) . '">
-                    <input type="range" id="priceMax" class="slider form-range" name="priceMax" min="0" max="1000" step="0.01" value="' . htmlspecialchars($priceMax) . '">
+                    <input type="range" id="priceMin" class="slider form-range" name="priceMin" min="0" max="6000" step="0.01" value="' . htmlspecialchars($priceMin) . '">
+                    <input type="range" id="priceMax" class="slider form-range" name="priceMax" min="0" max="6000" step="0.01" value="' . htmlspecialchars($priceMax) . '">
                 </div>
                 <p>Selected Price: <span id="priceDisplayMin">' . htmlspecialchars($priceMin) . '</span> - <span id="priceDisplayMax">' . htmlspecialchars($priceMax) . ' €</span></p>
             </div>
