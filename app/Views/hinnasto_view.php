@@ -142,7 +142,9 @@ class AlkonHinnastoView {
                      '&energyMax=' . urlencode($energyMax) .
                      '">Previous</a>';
         }
+        
         $html .= '<b style="line-height:2em;">'.$currentPage." of ".$totalPages."</b>";
+
         if ($currentPage < $totalPages) {
             $html .= '<a class="btn btn-primary" href="?page=' . ($currentPage + 1) .
                      '&type=' . urlencode($type) .
