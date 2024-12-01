@@ -5,11 +5,11 @@ class AlkonHinnastoView {
         $type = $_GET['type'] ?? '';
         $country = $_GET['country'] ?? '';
         $bottleSizeMin = $_GET['bottleSizeMin'] ?? '0';
-        $bottleSizeMax = $_GET['bottleSizeMax'] ?? '1';
+        $bottleSizeMax = $_GET['bottleSizeMax'] ?? '10';
         $priceMin = $_GET['priceMin'] ?? '0';
-        $priceMax = $_GET['priceMax'] ?? '6000';
+        $priceMax = $_GET['priceMax'] ?? '10000';
         $energyMin = $_GET['energyMin'] ?? '0';
-        $energyMax = $_GET['energyMax'] ?? '50';
+        $energyMax = $_GET['energyMax'] ?? '100';
 
         // Start generating HTML
         $htmlHeaders = '<!DOCTYPE html>
@@ -64,8 +64,8 @@ class AlkonHinnastoView {
             <div class="mb-3">
                 <label for="bottleSize">Bottle Size:</label>
                 <div class="slider-container">
-                    <input type="range" id="bottleSizeMin" class="slider form-range" name="bottleSizeMin" min="0" max="1" step="0.1" value="' . htmlspecialchars($bottleSizeMin) . '">
-                    <input type="range" id="bottleSizeMax" class="slider form-range" name="bottleSizeMax" min="0" max="1" step="0.1" value="' . htmlspecialchars($bottleSizeMax) . '">
+                    <input type="range" id="bottleSizeMin" class="slider form-range" name="bottleSizeMin" min="0" max="10" step="0.1" value="' . htmlspecialchars($bottleSizeMin) . '">
+                    <input type="range" id="bottleSizeMax" class="slider form-range" name="bottleSizeMax" min="0" max="10" step="0.1" value="' . htmlspecialchars($bottleSizeMax) . '">
                 </div>
                 <p>Selected Bottle Size: <span id="bottleSizeDisplayMin">' . htmlspecialchars($bottleSizeMin) . '</span> - <span id="bottleSizeDisplayMax">' . htmlspecialchars($bottleSizeMax) . ' l</span></p>
             </div>
@@ -73,8 +73,8 @@ class AlkonHinnastoView {
             <div class="mb-3">
                 <label for="price">Price Range:</label>
                 <div class="slider-container">
-                    <input type="range" id="priceMin" class="slider form-range" name="priceMin" min="0" max="6000" step="0.01" value="' . htmlspecialchars($priceMin) . '">
-                    <input type="range" id="priceMax" class="slider form-range" name="priceMax" min="0" max="6000" step="0.01" value="' . htmlspecialchars($priceMax) . '">
+                    <input type="range" id="priceMin" class="slider form-range" name="priceMin" min="0" max="10000" step="0.01" value="' . htmlspecialchars($priceMin) . '">
+                    <input type="range" id="priceMax" class="slider form-range" name="priceMax" min="0" max="10000" step="0.01" value="' . htmlspecialchars($priceMax) . '">
                 </div>
                 <p>Selected Price: <span id="priceDisplayMin">' . htmlspecialchars($priceMin) . '</span> - <span id="priceDisplayMax">' . htmlspecialchars($priceMax) . ' €</span></p>
             </div>
@@ -82,8 +82,8 @@ class AlkonHinnastoView {
             <div class="mb-3">
                 <label for="energy">Energy Range:</label>
                 <div class="slider-container">
-                    <input type="range" id="energyMin" class="slider form-range" name="energyMin" min="0" max="50" step="0.1" value="' . htmlspecialchars($energyMin) . '">
-                    <input type="range" id="energyMax" class="slider form-range" name="energyMax" min="0" max="50" step="0.1" value="' . htmlspecialchars($energyMax) . '">
+                    <input type="range" id="energyMin" class="slider form-range" name="energyMin" min="0" max="100" step="0.1" value="' . htmlspecialchars($energyMin) . '">
+                    <input type="range" id="energyMax" class="slider form-range" name="energyMax" min="0" max="100" step="0.1" value="' . htmlspecialchars($energyMax) . '">
                 </div>
                 <p>Selected Energy: <span id="energyDisplayMin">' . htmlspecialchars($energyMin) . '</span> - <span id="energyDisplayMax">' . htmlspecialchars($energyMax) . ' kcal/100 ml</span></p>
             </div>
